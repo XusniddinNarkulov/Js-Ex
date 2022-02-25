@@ -22,3 +22,11 @@ if (avgDelfin > avgKoala) {
 // } else {
 //   console.log(`hech kim g'alaba qozonmadi`);
 // }
+
+// ex-2
+let userLogin = prompt(`loginni kiriting`);
+let userParol = prompt(`parolni kiriting`);
+alert(`tabriklaymiz siz tizimga oddiy user bo'lib kirdingiz`);
+let adminLogin = prompt(`admin loginni kiriting`);
+let adminParol = prompt(`admin parolni kiriting`);
+alert(`tabriklaymiz siz tizimga admin bo'lib kirdingiz`);
