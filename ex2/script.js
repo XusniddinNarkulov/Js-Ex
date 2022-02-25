@@ -1,8 +1,6 @@
-// 1-topshiriq
-let calcAverage = (a, b, c) => {
-  return (a + b + c) / 3;
-};
-console.log(calcAverage(44, 23, 71));
-console.log(calcAverage(65, 54, 49));
-
-let checkWinner = function(avgDolhins,avgKoalas);
+let son = Number(prompt("son kiriting:"));
+if (son % 2 === 0) {
+  alert(`siz juft son kiritdingiz`);
+} else {
+  alert(`siz toq son kiritdingiz`);
+}
