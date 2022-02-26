@@ -36,6 +36,8 @@ function myCal(atr1, atr2) {
 
     case "/":
       return atr1 / atr2;
+    default:
+      return `404 not found`;
   }
 }
 console.log(myCal(a, b));
