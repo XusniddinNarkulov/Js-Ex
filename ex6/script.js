@@ -26,9 +26,12 @@
 // }
 
 // 3-topshiriq
-let a = Number(prompt(`1-sonni kiriting`));
-let b = Number(prompt(`2-sonni kiriting`));
-let a1 = Number(b + 0);
-let b1 = Number(a + 0);
+// let a = Number(prompt(`1-sonni kiriting`));
+// let b = Number(prompt(`2-sonni kiriting`));
+// let a1 = Number(b + 0);
+// let b1 = Number(a + 0);
+// console.log(`natija: ${a1}, ${b1}`);
 
-console.log(`natija: ${a1}, ${b1}`);
+// 4-topshiriq
+let x = Number(prompt(`x ni kiriting`));
+console.log((x = x ** 5 + 8 * x ** 4 - 5 * x ** 3 + 3 * x ** 2 + x - 12));
