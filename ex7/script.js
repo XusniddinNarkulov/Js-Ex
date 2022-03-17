@@ -3,7 +3,11 @@ const usluga = [];
 const total = [];
 function calcUsluga() {
   for (let i = 0; i < bills.length; i++) {
-    usluga.push(bills[i] * 0.1);
+    if (bills[i] >= 50 && bills[i] <= 300) {
+      usluga.push(bills[i] * 0.15);
+    } else {
+      usluga.push(bills[i] * 0.2);
+    }
   }
   return usluga;
 }
@@ -13,6 +17,13 @@ function calcTotal() {
   }
   return total;
 }
-function calcAverage() {}
+function calcAverage() {
+  let s = 0;
+  for (let i = 0; i < total.length; i++) {
+    s += total[i] / total.length;
+  }
+  return `average total: ${s}`;
+}
 console.log(calcUsluga());
 console.log(calcTotal());
+console.log(calcAverage());
