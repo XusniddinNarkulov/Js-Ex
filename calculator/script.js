@@ -23,11 +23,3 @@ buttons.map((val) => {
     }
   });
 });
-// buttons.map((val) => {
-//   val.addEventListener("click", (e) => {
-//     switch (e.target.innerText) {
-//       case "C":
-//         display.textContent = "";
-//     }
-//   });
-// });
