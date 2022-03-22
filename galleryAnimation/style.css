@@ -1,0 +1,14 @@
+.gallery {
+  display: flex;
+  gap: 2%;
+}
+.child {
+  background-image: url(neo-matrix-4.jpg);
+  width: 10%;
+  height: 100vh;
+  border-radius: 100px;
+  transition: 0.5s;
+}
+.view {
+  width: 100%;
+}
