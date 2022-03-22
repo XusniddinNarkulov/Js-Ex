@@ -1,5 +1,6 @@
 "use strict";
 
+let div = document.querySelectorAll("div");
 for (let el of div) {
   console.log(el);
   el.addEventListener("mouseenter", function (e) {
