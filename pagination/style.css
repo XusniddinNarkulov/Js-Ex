@@ -1,0 +1,53 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+  gap: 5%;
+}
+.pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+p {
+  border: 5px solid grey;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding-top: 15px;
+}
+.pages div {
+  width: 100px;
+  height: 5px;
+  background-color: grey;
+}
+
+.blueP {
+  border-color: blue;
+}
+.blueDiv {
+  background-color: blue;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 25%;
+}
+button {
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 5% 25%;
+  background-color: blue;
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn {
+  background-color: grey;
+  cursor: no-drop;
+}
