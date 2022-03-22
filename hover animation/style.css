@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  height: 100vh;
+  transition: 0.5s;
+}
+div {
+  background-image: url(neo-matrix-4.jpg);
+  background-position: center;
+  width: 100%;
+  color: aliceblue;
+  transition: 1s;
+}
+
+.ps {
+  background-color: blueviolet;
+  background-blend-mode: color-dodge;
+}
+
+.width {
+  width: 200%;
+}
