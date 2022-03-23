@@ -7,7 +7,10 @@
   width: 10%;
   height: 100vh;
   border-radius: 100px;
-  transition: 0.5s;
+  transition: 0.4s;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .view {
   width: 100%;
