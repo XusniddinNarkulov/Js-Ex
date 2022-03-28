@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  display: flex;
+  gap: 5%;
+}
+
+.child {
+  background-color: teal;
+  padding: 5%;
+}
+p {
+  padding: 10%;
+  background-color: black;
+}

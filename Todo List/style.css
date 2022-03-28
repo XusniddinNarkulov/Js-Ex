@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  /* align-items: center; */
+  justify-content: center;
+  background-color: steelblue;
+  color: aliceblue;
+}
+.container {
+  background-color: blue;
+  width: 80%;
+  text-align: center;
+}
+input {
+  width: 50%;
+}
+label {
+  background-color: red;
+  padding: 1%;
+  border-radius: 10px;
+}
+label:hover {
+  background-color: brown;
+}
+.content {
+  padding: 10%;
+}
+.content__child {
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  background-color: yellow;
+  border-radius: 10px;
+  padding: 0 2%;
+}
+button:hover {
+  background-color: orange;
+}
