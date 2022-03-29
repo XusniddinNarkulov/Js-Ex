@@ -17,29 +17,45 @@
 //   }
 // }, 10);
 
-window.onload = function () {
-  let day = 1;
-  let hour = 1;
-  let minute = 5;
-  let sec = 60;
-  setInterval(function () {
-    document.getElementById("timer").innerHTML =
-      day + ` : ` + hour + ` : ` + minute + ` : ` + sec;
-    sec--;
-    if (sec == 0) {
-      minute--;
-      sec = 59;
-      if (minute == 0) {
-        hour--;
-        minute = 59;
-        if (hour == 0) {
-          day--;
-          hour = 23;
-          if ((day = 0)) {
-            clearInterval;
-          }
+// window.onload = function () {
+let day = 0;
+let hour = 1;
+let minute = 5;
+let sec = 59;
+let si = setInterval(function () {
+  document.querySelector("body").innerHTML = `<div class="container">
+    <div class="child">
+      <p class="day">${day}</p>
+      <i>Days</i>
+    </div>
+    <div class="child">
+      <p class="hour">${hour}</p>
+      <i>Hours</i>
+    </div>
+    <div class="child">
+      <p class="minute">${minute}</p>
+      <i>Minutes</i>
+    </div>
+    <div class="child">
+      <p class="second">${sec}</p>
+      <i>Seconds</i>
+    </div>
+  </div>`;
+  sec--;
+  if (sec == -1) {
+    minute--;
+    sec = 59;
+    if (minute == -1) {
+      hour--;
+      minute = 59;
+      if (hour == -1) {
+        day--;
+        hour = 23;
+        if (day == -1) {
+          clearInterval(si);
         }
       }
     }
-  }, 1000);
-};
+  }
+}, 1);
+// };
