@@ -24,10 +24,12 @@ label:hover {
 }
 .content {
   padding: 10%;
+  /* max-width: 80%; */
 }
 .content__child {
   display: flex;
   justify-content: space-between;
+  margin-top: 2%;
 }
 button {
   background-color: yellow;
@@ -36,4 +38,7 @@ button {
 }
 button:hover {
   background-color: orange;
+}
+.none {
+  display: none;
 }
