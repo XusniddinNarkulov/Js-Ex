@@ -57,5 +57,5 @@ let si = setInterval(function () {
       }
     }
   }
-}, 1);
+}, 1000);
 // };
