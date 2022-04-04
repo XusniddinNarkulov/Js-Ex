@@ -34,6 +34,8 @@ label {
   padding: 5%;
 }
 .pop {
+  max-height: 66vh;
+  overflow-y: scroll;
   width: 60%;
   margin: 10% auto;
   background-color: tomato;
