@@ -1,6 +1,7 @@
 * {
   margin: 5px;
   padding: 0;
+  font-family: sans-serif;
 }
 body {
   text-align: center;
@@ -9,6 +10,9 @@ body {
 }
 .red {
   color: red;
+}
+.notFind {
+  display: none;
 }
 label {
   cursor: pointer;
@@ -24,11 +28,13 @@ label {
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  height: 70vh;
+  height: 60vh;
 }
 .child__img {
   width: 100%;
-  height: 100%;
+  height: 80%;
+  border-radius: 15px;
+  margin: 0;
 }
 .child__get-recipe {
   padding: 5%;
@@ -46,6 +52,13 @@ label {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  position: fixed;
+  left: 20%;
+  top: 0;
+  visibility: hidden;
+}
+.visible {
+  visibility: visible;
 }
 .pop__x {
   position: absolute;
