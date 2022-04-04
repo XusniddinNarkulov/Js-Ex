@@ -1,0 +1,67 @@
+* {
+  margin: 5px;
+  padding: 0;
+}
+body {
+  text-align: center;
+  padding: 2%;
+  /* margin: 0; */
+}
+.red {
+  color: red;
+}
+label {
+  cursor: pointer;
+}
+.grid {
+  display: grid;
+  gap: 2%;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 5% 0;
+}
+.child {
+  box-shadow: 0 0 10px 0.1px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+}
+.child__img {
+  width: 100%;
+  height: 100%;
+}
+.child__get-recipe {
+  padding: 5%;
+}
+.pop {
+  width: 60%;
+  margin: 10% auto;
+  background-color: tomato;
+  color: white;
+  padding: 3%;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pop__x {
+  position: absolute;
+  right: 2%;
+  top: 1%;
+  cursor: pointer;
+}
+
+.bg-white {
+  background-color: white;
+  color: black;
+  padding: 1%;
+  border-radius: 5px;
+  align-self: center;
+}
+.pop__img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  align-self: center;
+}
