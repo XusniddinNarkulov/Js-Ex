@@ -2,7 +2,7 @@
 
 const input = document.querySelector("input");
 const notFound = document.querySelector(".search__not-found");
-const container = document.querySelector(".container");
+const containerMain = document.querySelector(".container__main");
 const latestRepos = document.querySelector(".latest-repos__grid");
 
 let jsn;
@@ -11,26 +11,39 @@ let el;
 async function func(user) {
   let fetc = await fetch(`https://api.github.com/users/${user}`);
   console.log(fetc);
+  if (fetc.ok == false) {
+    notFound.style.display = "block";
+  } else {
+    notFound.style.display = "none";
+  }
   jsn = await fetc.json();
   console.log(jsn);
+
+  latestRepos.innerHTML = "";
+
   let reposUrl = await fetch(jsn.repos_url);
   let repoJsn = await reposUrl.json();
   console.log(repoJsn[0]);
+  renderContainer();
+
   for (let ele of repoJsn) {
-    console.log(ele);
+    // console.log(ele);
     el = ele;
-    return el;
+    // return el;
+    renderLatestRepos();
   }
+
   return jsn;
   // console.log(jsn.avatar_url);
   // renderContainer();
   // renderLatestRepos();
 }
-func("XusniddinNarkulov");
+// func("XusniddinNarkulov");
 
 function renderContainer() {
-  container.innerHTML = `
-<div class="container__main">
+  containerMain.innerHTML = "";
+  containerMain.innerHTML = `
+
   <div class="container__main--left">
     <img src="${jsn.avatar_url}" alt="" />
     <a href="${jsn.html_url}" class="profile">View Profile</a>
@@ -53,13 +66,7 @@ function renderContainer() {
   </div>
 </div>
 
-<div class="latest-repos">
-  <h2>Latest Repos</h2>
-  <div class="latest-repos__grid">
-    
-    </div>
-  </div>
-</div>
+  
   `;
 }
 
@@ -76,10 +83,15 @@ function renderLatestRepos() {
   `;
 }
 
-window.addEventListener("keydown", function (e) {
-  if (e.key == "Enter") {
-    func(input.value);
-    renderContainer();
-    renderLatestRepos();
-  }
+input.addEventListener("input", function (e) {
+  e.preventDefault();
+
+  func(input.value);
+  // e.preventDefault();
+  // if (e.key == "Enter") {
+  //   func(input.value);
+  // renderContainer();
+  // renderLatestRepos();
 });
+
+// func("sdfsdfslkhsghs");
