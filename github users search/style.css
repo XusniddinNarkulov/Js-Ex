@@ -49,6 +49,10 @@ input {
   grid-template-rows: 7fr 1fr;
   gap: 5px;
 }
+.profile-img {
+  width: 100%;
+  object-fit: cover;
+}
 .profile {
   background-color: rgba(0, 0, 255, 0.74);
   color: white;
