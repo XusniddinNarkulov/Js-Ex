@@ -12,7 +12,8 @@ let btn = document.querySelector(".run__btn");
 let langs = [];
 let langsArr = [];
 
-btn.addEventListener("click", function () {
+fromInput.addEventListener("input", function (e) {
+  e.preventDefault();
   const encodedParams = new URLSearchParams();
   encodedParams.append("q", fromInput.value);
   encodedParams.append("target", toLang.value);
@@ -35,15 +36,17 @@ btn.addEventListener("click", function () {
   )
     .then((response) => response.json())
     .then((response) => {
-      toInput = response.data.translations[0].translatedText;
+      toInput.innerHTML = response.data.translations[0].translatedText;
       console.log(response.data.translations[0].translatedText);
     })
     .catch((err) => console.error(err));
-  /**data:
-translations: Array(1)
-0: {translatedText: 'hello'}
-length: 1 */
 });
+
+const encodedParams = new URLSearchParams();
+// console.log(encodedParams);
+encodedParams.append("q", fromInput.value);
+encodedParams.append("target", toLang.value);
+encodedParams.append("source", fromLang.value);
 
 const options = {
   method: "POST",

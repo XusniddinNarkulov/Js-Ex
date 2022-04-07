@@ -85,8 +85,9 @@ function renderLatestRepos() {
 
 input.addEventListener("input", function (e) {
   e.preventDefault();
-
+  console.time("a");
   func(input.value);
+  console.timeEnd("a");
   // e.preventDefault();
   // if (e.key == "Enter") {
   //   func(input.value);
