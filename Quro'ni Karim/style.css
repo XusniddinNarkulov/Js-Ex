@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  padding: 1%;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.container__child {
+  padding: 1%;
+}
+
+.popup {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  box-shadow: 0 0 5px 0.1px;
+  margin: 2% auto;
+  justify-content: center;
+  overflow-y: scroll;
+  padding: 2%;
+  padding-bottom: 7%;
+  transition: 0.3s;
+  display: none;
+}
+.visible {
+  display: block;
+}
+.popup__x-icon {
+  position: absolute;
+  right: 1%;
+  cursor: pointer;
+}
+.popup__child {
+  padding: 1%;
+  border-bottom: 1px solid wheat;
+}
+.popup__child--arabic {
+  padding: 2%;
+  text-align: end;
+}
+
+.audio {
+  position: fixed;
+  right: 10%;
+  bottom: 5%;
+}
