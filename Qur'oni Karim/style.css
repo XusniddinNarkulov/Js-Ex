@@ -13,7 +13,9 @@ body {
   font-size: 1.8rem;
   padding: 1%;
 }
-
+a {
+  text-decoration: none;
+}
 .container {
   margin: 0 auto;
 }
@@ -24,8 +26,13 @@ body {
 
 .popup {
   position: relative;
+  position: fixed;
+  /* z-index: 10; */
+  background-color: white;
+  top: 5%;
+  left: 2%;
   max-width: 90vw;
-  max-height: 90vh;
+  max-height: 66vh;
   box-shadow: 0 0 5px 0.1px;
   margin: 2% auto;
   justify-content: center;
