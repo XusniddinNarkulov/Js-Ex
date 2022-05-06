@@ -63,9 +63,5 @@
 // console.log(a.toString().split("").reverse().splice(0, 3));
 // console.log(str.match(1, 3));
 
-function myFunction(arr) {
-  return arr.every((val) => typeof val);
-}
-console.log(myFunction(["test", "test", "test", 22]));
-let arr = ["test", "test"];
-console.log(arr.every((val) => typeof val === Boolean));
+function myFunction(a) {}
+console.log(myFunction([1, 2, 2, 3]));
