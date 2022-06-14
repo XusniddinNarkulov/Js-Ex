@@ -89,12 +89,21 @@
 //    })
 // );
 
+// function myFunction(obj) {
+//    let newObj = {};
+//    for (let el in obj) {
+//       console.log(el);
+//       newObj[el] = obj[el].trim() === "" ? null : obj[el];
+//    }
+//    return newObj;
+// }
+// console.log(myFunction({ a: "", b: "b", c: " ", d: "d" }));
+
 function myFunction(obj) {
    let newObj = {};
-   for (let el in obj) {
-      console.log(el);
-      newObj[el] = obj[el].trim() === "" ? null : obj[el];
+   for (let [k, v] of Object.entries(obj)) {
+      newObj[v] = k;
    }
    return newObj;
 }
-console.log(myFunction({ a: "", b: "b", c: " ", d: "d" }));
+console.log(myFunction({ z: "a", y: "b", x: "c", w: "d" }));
