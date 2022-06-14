@@ -108,11 +108,28 @@
 // }
 // console.log(myFunction({ z: "a", y: "b", x: "c", w: "d" }));
 
+// function myFunction(a, b) {
+//    let newObj = {};
+//    for (let [k, v] of Object.entries(a)) {
+//       newObj[k] = v * b;
+//    }
+//    return newObj;
+// }
+// console.log(myFunction({ a: 1, b: 2, c: 3 }, 3));
+
+// function myFunction(a, b) {
+//    let newObj = {};
+//    a.map((val, key) => {
+//       newObj[val] = b[key];
+//    });
+//    return newObj;
+// }
+// console.log(myFunction(["w", "x", "y", "z"], [10, 9, 5, 2]));
+
 function myFunction(a, b) {
-   let newObj = {};
-   for (let [k, v] of Object.entries(a)) {
-      newObj[k] = v * b;
-   }
-   return newObj;
+   console.log(a);
+   return +a === +b;
 }
-console.log(myFunction({ a: 1, b: 2, c: 3 }, 3));
+console.log(
+   myFunction(new Date("2000/01/01 08:00:00"), new Date("2000/01/01 08:00:00"))
+);
