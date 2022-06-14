@@ -64,8 +64,10 @@
 // console.log(str.match(1, 3));
 
 function myFunction(arr) {
-  return arr.every((val) => typeof val);
+   const res = arr.reduce((acc, val) => {
+      return acc[val] ? ++acc[val] : (acc[val] = 1), acc;
+   }, {});
+   return res;
 }
-console.log(myFunction(["test", "test", "test", 22]));
-let arr = ["test", "test"];
-console.log(arr.every((val) => typeof val === Boolean));
+
+console.log(myFunction([2, 2, 2, 4, 88, 88]));
