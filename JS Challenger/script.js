@@ -71,20 +71,30 @@
 // }
 // console.log(myFunction([2, 2, 2, 4, 88, 88]));
 
+// function myFunction(obj) {
+//    return {
+//       fn: obj.fn,
+//       ln: obj.ln,
+//       ...(obj.size && { size: `${obj.size}cm` }),
+//       ...(obj.weight && { weight: `${obj.weight}kg` }),
+//    };
+// }
+// console.log(
+//    myFunction({
+//       fn: "Martin",
+//       ln: "Harper",
+//       age: 26,
+//       email: "martin.harper@test.de",
+//       weight: 102,
+//    })
+// );
+
 function myFunction(obj) {
-   return {
-      fn: obj.fn,
-      ln: obj.ln,
-      ...(obj.size && { size: `${obj.size}cm` }),
-      ...(obj.weight && { weight: `${obj.weight}kg` }),
-   };
+   let newObj = {};
+   for (let el in obj) {
+      console.log(el);
+      newObj[el] = obj[el].trim() === "" ? null : obj[el];
+   }
+   return newObj;
 }
-console.log(
-   myFunction({
-      fn: "Martin",
-      ln: "Harper",
-      age: 26,
-      email: "martin.harper@test.de",
-      weight: 102,
-   })
-);
+console.log(myFunction({ a: "", b: "b", c: " ", d: "d" }));
