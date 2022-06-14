@@ -99,11 +99,20 @@
 // }
 // console.log(myFunction({ a: "", b: "b", c: " ", d: "d" }));
 
-function myFunction(obj) {
+// function myFunction(obj) {
+//    let newObj = {};
+//    for (let [k, v] of Object.entries(obj)) {
+//       newObj[v] = k;
+//    }
+//    return newObj;
+// }
+// console.log(myFunction({ z: "a", y: "b", x: "c", w: "d" }));
+
+function myFunction(a, b) {
    let newObj = {};
-   for (let [k, v] of Object.entries(obj)) {
-      newObj[v] = k;
+   for (let [k, v] of Object.entries(a)) {
+      newObj[k] = v * b;
    }
    return newObj;
 }
-console.log(myFunction({ z: "a", y: "b", x: "c", w: "d" }));
+console.log(myFunction({ a: 1, b: 2, c: 3 }, 3));
