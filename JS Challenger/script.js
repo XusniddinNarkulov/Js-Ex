@@ -63,11 +63,28 @@
 // console.log(a.toString().split("").reverse().splice(0, 3));
 // console.log(str.match(1, 3));
 
-function myFunction(arr) {
-   const res = arr.reduce((acc, val) => {
-      return acc[val] ? ++acc[val] : (acc[val] = 1), acc;
-   }, {});
-   return res;
-}
+// function myFunction(arr) {
+//    const res = arr.reduce((acc, val) => {
+//       return acc[val] ? ++acc[val] : (acc[val] = 1), acc;
+//    }, {});
+//    return res;
+// }
+// console.log(myFunction([2, 2, 2, 4, 88, 88]));
 
-console.log(myFunction([2, 2, 2, 4, 88, 88]));
+function myFunction(obj) {
+   return {
+      fn: obj.fn,
+      ln: obj.ln,
+      ...(obj.size && { size: `${obj.size}cm` }),
+      ...(obj.weight && { weight: `${obj.weight}kg` }),
+   };
+}
+console.log(
+   myFunction({
+      fn: "Martin",
+      ln: "Harper",
+      age: 26,
+      email: "martin.harper@test.de",
+      weight: 102,
+   })
+);
