@@ -126,10 +126,39 @@
 // }
 // console.log(myFunction(["w", "x", "y", "z"], [10, 9, 5, 2]));
 
-function myFunction(a, b) {
-   console.log(a);
-   return +a === +b;
-}
-console.log(
-   myFunction(new Date("2000/01/01 08:00:00"), new Date("2000/01/01 08:00:00"))
-);
+// function myFunction(a, b) {
+//    console.log(a);
+//    return +a === +b;
+// }
+// console.log(
+//    myFunction(new Date("2000/01/01 08:00:00"), new Date("2000/01/01 08:00:00"))
+// );
+
+// function func(n) {
+//    for (let i = 1; i <= n; i++) {
+//       if (i % 3 === 0) {
+//          console.log("Fizz");
+//       } else if (i % 5 === 0) {
+//          console.log("Buzz");
+//       } else if (i % 15 === 0) {
+//          console.log("FizzBuzz");
+//       } else console.log(i);
+//    }
+// }
+
+// func(15);
+
+const input = document.getElementById("input");
+input.addEventListener("input", () => {
+   // type in your code here
+   let list = document.getElementsByTagName("li");
+
+   for (let el of list) {
+      text = el.textContent || el.innerText;
+      if (text.toUpperCase().indexOf(input.value.toUpperCase()) > -1) {
+         el.style.display = "";
+      } else {
+         el.style.display = "none";
+      }
+   }
+});
