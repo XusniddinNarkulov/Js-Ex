@@ -134,31 +134,32 @@
 //    myFunction(new Date("2000/01/01 08:00:00"), new Date("2000/01/01 08:00:00"))
 // );
 
-// function func(n) {
-//    for (let i = 1; i <= n; i++) {
-//       if (i % 3 === 0) {
-//          console.log("Fizz");
-//       } else if (i % 5 === 0) {
-//          console.log("Buzz");
-//       } else if (i % 15 === 0) {
-//          console.log("FizzBuzz");
-//       } else console.log(i);
+//dom
+// const input = document.getElementById("input");
+// input.addEventListener("input", () => {
+//    // type in your code here
+//    let list = document.getElementsByTagName("li");
+
+//    for (let el of list) {
+//       text = el.textContent || el.innerText;
+//       if (text.toUpperCase().indexOf(input.value.toUpperCase()) > -1) {
+//          el.style.display = "";
+//       } else {
+//          el.style.display = "none";
+//       }
 //    }
-// }
+// });
 
-// func(15);
-
-const input = document.getElementById("input");
-input.addEventListener("input", () => {
-   // type in your code here
-   let list = document.getElementsByTagName("li");
-
-   for (let el of list) {
-      text = el.textContent || el.innerText;
-      if (text.toUpperCase().indexOf(input.value.toUpperCase()) > -1) {
-         el.style.display = "";
-      } else {
-         el.style.display = "none";
+//sets
+function myFunction(a, b) {
+   let arr1 = [...a];
+   let arr2 = [...b];
+   let newArr = [];
+   for (let el of arr1) {
+      if (arr2.includes(el)) {
+         newArr.push(el);
       }
    }
-});
+   return new Set([...newArr]);
+}
+console.log(myFunction(new Set([1, 2, 3]), new Set([4, 5, 6])));
